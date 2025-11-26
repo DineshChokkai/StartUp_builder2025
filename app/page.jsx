@@ -63,13 +63,13 @@ export default function Home() {
         <ServicesGrid id="services"/>
         
       </div>
-      <PillarsGird/>
+      {/* <PillarsGird/>
       <ServicesAccordion/>
       <Ecosystem/>
       <AIHighlights/>
       <Videos/>
       <TestimonialsVideo/>
-      <FAQAccordion/>
+      <FAQAccordion/> */}
       <FinalCTA/>
       {/* Scroll to Top Button */}
       <button
