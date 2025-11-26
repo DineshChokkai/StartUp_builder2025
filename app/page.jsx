@@ -63,13 +63,12 @@ export default function Home() {
       </div> */}
         <ServicesGrid id="services" />
         <PillarsGird/>
-      {/* <ServicesAccordion/> */}
-      {/* <Ecosystem/> */}
-      {/* <AIHighlights/> */}
-      {/* <Videos/> */}
-      {/* <TestimonialsVideo/> */}
-      {/* <FAQAccordion/> */}
-        <FinalCTA />
+      <ServicesAccordion/>
+      <Ecosystem/>
+      <AIHighlights/>
+      <Videos/>
+      <TestimonialsVideo/>
+      <FAQAccordion/>
         {/* Scroll to Top Button */}
         <button
           onClick={scrollToTop}
