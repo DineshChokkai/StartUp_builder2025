@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Hero from "../components/Hero";
-import Verticles from "../components/Verticals"
+import Verticles from "../components/Verticals";
 import Videos from "../components/Videos";
 import ServicesGrid from "../components/ServicesGrid";
-import PillarsGird from "../components/PillarsGrid"
+import PillarsGird from "../components/PillarsGrid";
 import ServicesAccordion from "../components/ServicesAccordion";
 import Ecosystem from "../components/Ecosystem";
 import AIHighlights from "../components/AIHighlights";
@@ -13,7 +13,7 @@ import FAQAccordion from "../components/FAQAccordion";
 import FinalCTA from "../components/FinalCTA";
 import { ArrowUp, CircleFadingArrowUp } from "lucide-react";
 export default function Home() {
-    const [showScrollTop, setShowScrollTop] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   // Refs for sticky sections
   const verticalsRef = useRef(null);
@@ -48,10 +48,10 @@ export default function Home() {
   };
   return (
     <>
-    <section>
-      <Hero/>
-      <Verticles/>
-      <div
+      <section>
+        <Hero />
+        <Verticles />
+        {/* <div
         ref={servicesRef}
         className="
           sticky  top-[-450px] z-1   
@@ -60,30 +60,29 @@ export default function Home() {
           [opacity:calc(0.5 + var(--sticky-progress,0)*0.5)]
         "
       >
-        <ServicesGrid id="services"/>
-        
-      </div>
-      {/* <PillarsGird/>
-      <ServicesAccordion/>
-      <Ecosystem/>
-      <AIHighlights/>
-      <Videos/>
-      <TestimonialsVideo/>
-      <FAQAccordion/> */}
-      <FinalCTA/>
-      {/* Scroll to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className={`fixed bottom-8 right-[25px] z-50 text-white bg-gradient-to-r from-purple-600 to-pink-600 p-4 rounded-full shadow-2xl transition-all duration-500 hover:scale-110 ${
-          showScrollTop
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 translate-y-16 pointer-events-none"
-        }`}
-        aria-label="Scroll to top"
-      >
-        <ArrowUp className="w-5 h-5" />
-      </button>
-    </section>
+      </div> */}
+        <ServicesGrid id="services" />
+        <PillarsGird/>
+      {/* <ServicesAccordion/> */}
+      {/* <Ecosystem/> */}
+      {/* <AIHighlights/> */}
+      {/* <Videos/> */}
+      {/* <TestimonialsVideo/> */}
+      {/* <FAQAccordion/> */}
+        <FinalCTA />
+        {/* Scroll to Top Button */}
+        <button
+          onClick={scrollToTop}
+          className={`fixed bottom-8 right-[25px] z-50 text-white bg-gradient-to-r from-purple-600 to-pink-600 p-4 rounded-full shadow-2xl transition-all duration-500 hover:scale-110 ${
+            showScrollTop
+              ? "opacity-100 translate-y-0 pointer-events-auto"
+              : "opacity-0 translate-y-16 pointer-events-none"
+          }`}
+          aria-label="Scroll to top"
+        >
+          <ArrowUp className="w-5 h-5" />
+        </button>
+      </section>
     </>
   );
 }
