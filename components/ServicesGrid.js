@@ -26,13 +26,13 @@ const services = [
     cta: "Start Incorporation",
     icon: Building2,
     color: "from-purple-500 to-indigo-500",
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    video: "/assets/Videos/1st Video.mp4",
     image:
       "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=60",
   },
   {
     id: 2,
-    title: "Build the Product",
+    title: "Build the Product Application  (Tech & AI)",
     subtitle: "Turn your idea into a product. Fast.",
     description:
       "We design and build modern apps, websites, AI tools, and platforms — scalable, secure, and investor-ready.",
@@ -41,13 +41,13 @@ const services = [
     cta: "Plan My MVP",
     icon: Code,
     color: "from-pink-500 to-purple-500",
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    video: "/assets/Videos/Tech.mp4",
     image:
       "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=60",
   },
   {
     id: 3,
-    title: "Build the Brand",
+    title: "Build the Brand (Marketing & PR)",
     subtitle: "Make them remember your name.",
     description:
       "We craft your story, grow your audience, and drive results through creative campaigns, social media, and performance marketing.",
@@ -56,13 +56,13 @@ const services = [
     cta: "Get Growth Plan",
     icon: Megaphone,
     color: "from-fuchsia-500 to-pink-500",
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    video: "/assets/Videos/Branding & PR.mp4",
     image:
       "https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&w=800&q=60",
   },
   {
     id: 4,
-    title: "Build the Pipeline",
+    title: "Build the Pipeline (Sales Team)",
     subtitle: "Scale your revenue without scaling chaos.",
     description:
       "Our dedicated Sales Pods and RevOps systems handle lead generation, CRM automation, and closing — all powered by data.",
@@ -71,13 +71,13 @@ const services = [
     cta: "Launch Sales Engine",
     icon: TrendingUp,
     color: "from-violet-500 to-purple-500",
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    video: "/assets/Videos/Sales team.mp4",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=60",
   },
   {
     id: 5,
-    title: "Build the Content",
+    title: "Build the Content (Studio & Podcasts)",
     subtitle: "Content that connects and converts.",
     description:
       "From ad films to podcasts, our creative partners bring your brand to life with storytelling that sells.",
@@ -86,13 +86,13 @@ const services = [
     cta: "Book a Shoot",
     icon: Video,
     color: "from-blue-500 to-indigo-500",
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+    video: "/assets/Videos/Ads Shoot & Podcast.mp4",
     image:
       "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=60",
   },
   {
     id: 6,
-    title: "Build the Fundraise",
+    title: "Build the Fundraise (Funding & Grants)",
     subtitle: "Secure capital and investor confidence.",
     description:
       "We help you prepare pitch decks, grant proposals, and financial models that attract investors and unlock government funding.",
@@ -101,7 +101,7 @@ const services = [
     cta: "Prepare My Raise",
     icon: DollarSign,
     color: "from-purple-500 to-pink-500",
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
+    video: "/assets/Videos/Grant and Funding.mp4",
     image:
       "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=800&q=60",
   },
@@ -157,7 +157,7 @@ function ServiceCard({ service, isExpanded, isHovered, onClick, onMouseEnter, on
       </div>
 
       <div className={`relative p-6 transition-all duration-500 ${isExpanded ? 'bg-gradient-to-br from-purple-50 to-pink-50' : ''}`}>
-        <h3 className={`text-xl font-bold mb-2 transition-all duration-300 tracking-tight ${
+        <h3 className={`text-lg font-bold mb-2 transition-all duration-300 tracking-tight ${
           isExpanded ? 'bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent text-2xl' : 'text-gray-900 group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 group-hover:bg-clip-text group-hover:text-transparent'
         }`}>
           {service.title}

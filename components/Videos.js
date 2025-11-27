@@ -15,8 +15,8 @@ const videos = [
   {
     id: 1,
     title: "ZeeTV | Business Story",
-    thumbnail: "https://img.youtube.com/vi/5qap5aO4i9A/maxresdefault.jpg",
-    url: "https://www.youtube.com/embed/5qap5aO4i9A",
+    thumbnail: "https://img.youtube.com/vi/eXeeXJ3fqh4/maxresdefault.jpg",
+     url: "https://www.youtube.com/embed/qBt2KUwzzSk",
   },
   {
     id: 2,
@@ -282,7 +282,7 @@ export default function VideoCarousel() {
                     } transition-all duration-500 overflow-hidden`}>
                       {playingVideoId === video.id ? (
                         <iframe
-                          className="w-full h-full"
+                          className="w-full h-full "
                           src={`${video.url}?autoplay=1`}
                           title={video.title}
                           allow="autoplay; fullscreen; picture-in-picture"

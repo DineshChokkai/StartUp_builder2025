@@ -179,7 +179,7 @@ export default function Header() {
             : "bg-gradient-to-r from-purple-50/50 via-pink-50/50 to-blue-50/50 backdrop-blur-sm"
         }`}
       >
-        <div className="max-w-[1700px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
           {isLoading && (
             <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-[100]">
               <div className="w-16 h-16 border-4 border-purple-200 border-t-purple-600 rounded-full animate-spin"></div>

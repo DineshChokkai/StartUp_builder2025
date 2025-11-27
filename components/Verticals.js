@@ -7,42 +7,42 @@ const verticals = [
     id: 1,
     title: "Ideabaaz TV Show",
     description: "Feature your startup to a national audience and gain unprecedented visibility across India",
-    img: "https://images.unsplash.com/photo-1551836022-4c4c79ecde51?auto=format&fit=crop&w=800&q=60",
+    img: "/verticle1.webp",
     icon: "📺"
   },
   {
     id: 2,
     title: "Ideabaaz Platform",
     description: "A digital space to connect with founders, investors, and mentors in real-time",
-    img: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=800&q=60",
+    img: "/verticle8.png",
     icon: "🌐"
   },
   {
     id: 3,
     title: "Ideabaaz Dangal",
     description: "India's Ultimate Startup Ecosystem for Startups, investors, and Trainers",
-    img: "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=60",
+    img: "/verticle2.webp",
     icon: "🎯"
   },
   {
     id: 4,
     title: "Ideabaaz Expo",
     description: "India's premier competitive Idea Stage pitching platform with live feedback",
-    img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=60",
+    img: "/verticle4.webp",
     icon: "🚀"
   },
   {
     id: 5,
     title: "Incubation Centre",
     description: "Structured incubation journeys with funding and mentoring from industry experts",
-    img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=60",
+    img: "/verticle5.webp",
     icon: "🏢"
   },
   {
     id: 6,
     title: "Ideabaaz OTT",
     description: "A media platform broadcasting startup stories and entrepreneurial journeys",
-    img: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=60",
+    img: "/verticle6.webp",
     icon: "🎬"
   }
 ];
@@ -237,7 +237,7 @@ export default function CoreVerticals() {
                         <img
                           src={vertical.img}
                           alt={vertical.title}
-                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 "
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
                         
