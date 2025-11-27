@@ -136,7 +136,7 @@ export default function AIAdvantage() {
   }, []);
 
   return (
-    <section 
+    <section id="ai-advantage"
       ref={sectionRef}
       className="relative bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-16 overflow-hidden"
     >

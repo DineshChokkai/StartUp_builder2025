@@ -203,7 +203,7 @@ export default function CoreServicesSection() {
   const prev = () => setMobileIndex((p) => (p - 1 + services.length) % services.length);
 
   return (
-    <section ref={sectionRef} className="w-full relative py-20 overflow-hidden bg-gradient-to-br from-purple-100 via-pink-50 to-blue-100">
+    <section id="services" ref={sectionRef} className="w-full relative py-20 overflow-hidden bg-gradient-to-br from-purple-100 via-pink-50 to-blue-100">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-purple-400/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-400/20 rounded-full blur-3xl"></div>

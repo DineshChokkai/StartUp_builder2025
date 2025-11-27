@@ -168,7 +168,7 @@ export default function FAQsSection() {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-purple-100 via-pink-50 to-blue-100 py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
+    <section id="faqs" className="relative bg-gradient-to-br from-purple-100 via-pink-50 to-blue-100 py-20 px-4 md:px-8 lg:px-16 overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(147,51,234,0.4),transparent_70%)]"></div>
       </div>

@@ -6,45 +6,51 @@ const verticals = [
   {
     id: 1,
     title: "Ideabaaz TV Show",
-    description: "Feature your startup to a national audience and gain unprecedented visibility across India",
+    description:
+      "Feature your startup to a national audience and gain unprecedented visibility across India",
     img: "/verticle1.webp",
-    icon: "📺"
+    icon: "📺",
   },
   {
     id: 2,
     title: "Ideabaaz Platform",
-    description: "A digital space to connect with founders, investors, and mentors in real-time",
+    description:
+      "A digital space to connect with founders, investors, and mentors in real-time",
     img: "/verticle8.png",
-    icon: "🌐"
+    icon: "🌐",
   },
   {
     id: 3,
     title: "Ideabaaz Dangal",
-    description: "India's Ultimate Startup Ecosystem for Startups, investors, and Trainers",
+    description:
+      "India's Ultimate Startup Ecosystem for Startups, investors, and Trainers",
     img: "/verticle2.webp",
-    icon: "🎯"
+    icon: "🎯",
   },
   {
     id: 4,
     title: "Ideabaaz Expo",
-    description: "India's premier competitive Idea Stage pitching platform with live feedback",
+    description:
+      "India's premier competitive Idea Stage pitching platform with live feedback",
     img: "/verticle4.webp",
-    icon: "🚀"
+    icon: "🚀",
   },
   {
     id: 5,
     title: "Incubation Centre",
-    description: "Structured incubation journeys with funding and mentoring from industry experts",
+    description:
+      "Structured incubation journeys with funding and mentoring from industry experts",
     img: "/verticle5.webp",
-    icon: "🏢"
+    icon: "🏢",
   },
   {
     id: 6,
     title: "Ideabaaz OTT",
-    description: "A media platform broadcasting startup stories and entrepreneurial journeys",
+    description:
+      "A media platform broadcasting startup stories and entrepreneurial journeys",
     img: "/verticle6.webp",
-    icon: "🎬"
-  }
+    icon: "🎬",
+  },
 ];
 
 export default function CoreVerticals() {
@@ -62,7 +68,7 @@ export default function CoreVerticals() {
       const containerRect = container.getBoundingClientRect();
       const containerTop = containerRect.top;
       const windowHeight = window.innerHeight;
-      
+
       // Calculate the total scrollable distance (3 screen heights)
       const totalScrollDistance = windowHeight * 3;
       const cardWidth = 416; // 400px + 16px gap on each side
@@ -73,48 +79,51 @@ export default function CoreVerticals() {
       // Check if section is in viewport
       if (containerTop <= 0 && containerTop >= -totalScrollDistance) {
         // Calculate scroll progress (0 to 1)
-        const scrollProgress = Math.min(Math.abs(containerTop) / totalScrollDistance, 1);
+        const scrollProgress = Math.min(
+          Math.abs(containerTop) / totalScrollDistance,
+          1
+        );
         const translateX = scrollProgress * maxTranslate;
-        
+
         // Apply smooth horizontal transform
         if (cards) {
           cards.style.transform = `translateX(-${translateX}px)`;
         }
-        
+
         // Update progress indicator
         setScrollProgress(scrollProgress);
-        
+
         // Animate individual cards as they come into view
         const allCards = cards.children;
         for (let i = 0; i < allCards.length; i++) {
           const card = allCards[i];
           const cardPosition = i * cardWidth - translateX;
           const cardCenter = cardPosition + 200;
-          
+
           // Card is visible in viewport
           if (cardCenter > -400 && cardCenter < viewportWidth + 400) {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0) scale(1)';
-          } 
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0) scale(1)";
+          }
           // Card is still off-screen to the right
           else if (cardCenter >= viewportWidth + 400) {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(50px) scale(0.9)';
+            card.style.opacity = "0";
+            card.style.transform = "translateY(50px) scale(0.9)";
           }
           // Card has passed off-screen to the left
           else {
-            card.style.opacity = '0.3';
-            card.style.transform = 'translateY(0) scale(0.95)';
+            card.style.opacity = "0.3";
+            card.style.transform = "translateY(0) scale(0.95)";
           }
         }
       } else if (containerTop > 0) {
         // Reset when scrolling back up
         const allCards = cards.children;
         for (let i = 0; i < allCards.length; i++) {
-          allCards[i].style.opacity = '0';
-          allCards[i].style.transform = 'translateY(50px) scale(0.9)';
+          allCards[i].style.opacity = "0";
+          allCards[i].style.transform = "translateY(50px) scale(0.9)";
         }
-        cards.style.transform = 'translateX(0)';
+        cards.style.transform = "translateX(0)";
         setScrollProgress(0);
       }
     };
@@ -152,10 +161,10 @@ export default function CoreVerticals() {
   return (
     <>
       {/* Desktop: Horizontal Scroll on Page Scroll */}
-      <div 
+      <div
         ref={containerRef}
         className="hidden lg:block relative w-full bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50"
-        style={{ height: '400vh' }}
+        style={{ height: "400vh" }} 
       >
         <div className="sticky top-0 h-screen overflow-hidden">
           {/* Animated Background */}
@@ -171,7 +180,7 @@ export default function CoreVerticals() {
               <Sparkles size={20} className="animate-pulse" />
               <span className="font-bold tracking-tight">Our Ecosystem</span>
             </div>
-            
+
             <h2 className="text-5xl lg:text-6xl font-black text-gray-900 mb-6 tracking-tight">
               Explore Our{" "}
               <span className="relative inline-block">
@@ -191,7 +200,13 @@ export default function CoreVerticals() {
                     strokeLinecap="round"
                   />
                   <defs>
-                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <linearGradient
+                      id="gradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="0%"
+                    >
                       <stop offset="0%" stopColor="#9333ea" />
                       <stop offset="100%" stopColor="#ec4899" />
                     </linearGradient>
@@ -205,26 +220,38 @@ export default function CoreVerticals() {
           </div>
 
           {/* Horizontal Scrolling Cards */}
-          <div className="relative z-10 flex items-center h-[calc(100vh-300px)] px-8 overflow-hidden">
-            <div 
+          <div className="relative z-10 flex items-center h-[calc(100vh-200px)] px-8 overflow-hidden">
+            <div
               ref={cardsRef}
               className="flex gap-8 will-change-transform"
-              style={{ 
-                transition: 'transform 0.05s linear',
-                transform: 'translateX(0px)'
+              style={{
+                transition: "transform 0.05s linear",
+                transform: "translateX(0px)",
               }}
             >
               {verticals.map((vertical, index) => (
                 <div
                   key={vertical.id}
-                  className="flex-shrink-0 w-[400px] group"
-                  style={{ 
+                  className="
+  flex-shrink-0
+  w-[75vw] sm:w-[55vw] md:w-[40vw] lg:w-[28vw] 
+  group
+"
+                  style={{
                     opacity: 0,
-                    transform: 'translateY(50px) scale(0.9)',
-                    transition: 'opacity 0.6s ease-out, transform 0.6s ease-out'
+                    transform: "translateY(50px) scale(0.9)",
+                    transition:
+                      "opacity 0.6s ease-out, transform 0.6s ease-out",
                   }}
                 >
-                  <div className="relative h-[500px] rounded-3xl overflow-hidden bg-white shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 hover:-translate-y-2">
+                  <div
+                    className="
+  relative
+  h-[70vw] sm:h-[50vw] md:h-[40vw] lg:h-[28vw]
+  max-h-[520px]
+  rounded-3xl overflow-hidden bg-white shadow-2xl
+"
+                  >
                     {/* Gradient Border Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl p-[2px]">
                       <div className="w-full h-full bg-white rounded-3xl"></div>
@@ -233,14 +260,14 @@ export default function CoreVerticals() {
                     {/* Content */}
                     <div className="relative h-full flex flex-col">
                       {/* Image Section */}
-                      <div className="relative h-64 overflow-hidden">
+                      <div className="relative h-[40vw] sm:h-[28vw] md:h-[22vw] lg:h-[18vw] overflow-hidden">
                         <img
                           src={vertical.img}
                           alt={vertical.title}
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 "
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
-                        
+
                         {/* Number Badge */}
                         <div className="absolute top-4 left-4 w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">
                           {String(vertical.id).padStart(2, "0")}
@@ -311,7 +338,7 @@ export default function CoreVerticals() {
               <Sparkles size={20} className="animate-pulse" />
               <span className="font-bold tracking-tight">Our Ecosystem</span>
             </div>
-            
+
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
               Explore Our{" "}
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
@@ -325,10 +352,7 @@ export default function CoreVerticals() {
 
           <div className="grid grid-cols-2 gap-6">
             {verticals.map((vertical) => (
-              <div
-                key={vertical.id}
-                className="group"
-              >
+              <div key={vertical.id} className="group">
                 <div className="relative h-full rounded-3xl overflow-hidden bg-white shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
                   <div className="relative h-48 overflow-hidden">
                     <img
@@ -368,7 +392,7 @@ export default function CoreVerticals() {
               <Sparkles size={20} className="animate-pulse" />
               <span className="font-bold tracking-tight">Our Ecosystem</span>
             </div>
-            
+
             <h2 className="text-3xl font-black text-gray-900 mb-4 tracking-tight">
               Explore Our{" "}
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
@@ -442,26 +466,47 @@ export default function CoreVerticals() {
 
       <style jsx>{`
         @keyframes float {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          33% { transform: translate(30px, -30px) scale(1.1); }
-          66% { transform: translate(-20px, 20px) scale(0.9); }
+          0%,
+          100% {
+            transform: translate(0, 0) scale(1);
+          }
+          33% {
+            transform: translate(30px, -30px) scale(1.1);
+          }
+          66% {
+            transform: translate(-20px, 20px) scale(0.9);
+          }
         }
-        
+
         @keyframes float-delayed {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          33% { transform: translate(-30px, 30px) scale(0.9); }
-          66% { transform: translate(20px, -20px) scale(1.1); }
+          0%,
+          100% {
+            transform: translate(0, 0) scale(1);
+          }
+          33% {
+            transform: translate(-30px, 30px) scale(0.9);
+          }
+          66% {
+            transform: translate(20px, -20px) scale(1.1);
+          }
         }
 
         @keyframes pulse-slow {
-          0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
-          50% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.1); }
+          0%,
+          100% {
+            opacity: 0.3;
+            transform: translate(-50%, -50%) scale(1);
+          }
+          50% {
+            opacity: 0.5;
+            transform: translate(-50%, -50%) scale(1.1);
+          }
         }
-        
+
         .animate-float {
           animation: float 20s ease-in-out infinite;
         }
-        
+
         .animate-float-delayed {
           animation: float-delayed 25s ease-in-out infinite;
         }
